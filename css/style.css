@@ -60,11 +60,13 @@ html,body {
 
 .header-menu {
 	background-color: black;
+	
 }
 
 .header-menu ul{
 	float: left;
 	list-style-type: none;
+	padding: 0;
 }
 
 .header-menu a {
@@ -72,7 +74,122 @@ html,body {
 	text-decoration: none;
 }
 
-.menu-line {
+ .menu-line {
 	background: url("../image/menu-line.png");
 	height: 4px;
+}
+
+
+.header-menu li{
+    float:left;
+    position:relative;
+    display:block;
+}
+
+.header-menu li a{
+    display:block;
+    padding: 5px 15px;
+	color: white;
+    text-decoration:none;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.75); /* Тень текста, чтобы приподнять его на немного */
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+}
+
+
+.header-menu li a:hover{
+    color: gray;
+	text-decoration:underline;
+}
+
+
+.header-menu ul li{
+    padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    float:none;
+}
+
+.header-menu li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+    left:0; /* Приносим его обратно на экран, когда нужно */
+    opacity:1; /* Делаем непрозрачным */
+}
+
+.header-menu li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+ /* Выглядит полупрозрачным */
+    text-decoration:underline;
+}
+
+.header-menu li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+    text-decoration:none;
+    -webkit-transition:-webkit-transform 0.075s linear;
+}
+
+.header-menu li:hover ul li a:hover{ 
+    text-decoration:underline;
+    -moz-transform:scale(1.05);
+    -webkit-transform:scale(1.05);
+}
+
+.header-menu ul li{
+    padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    float: left;
+}
+
+.header-menu li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+    left:0; /* Приносим его обратно на экран, когда нужно */
+    opacity:1; /* Делаем непрозрачным */
+}
+
+
+.header-submenu ul {
+	position: absolute;
+	display: none;
+	background: black;
+}
+.header-submenu ul li {
+	display: inline-block;
+	position: relative;
+	float: none;
+}
+.header-submenu:hover > ul {
+	display: block;
+}
+
+.header-submenu > a:after {
+	content: "";
+	background: url("../image/flag.png") no-repeat;
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	position: absolute;
+    top: 12px;
+    margin-left: 5px;
+}
+
+.header-submenu:hover > a:after{
+	content: "";
+	background: url("../image/flag.png") no-repeat;
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	transform:rotate(180deg);
+	position: absolute;
+    top: 8px;
+    margin-left: 2px;
+}
+
+.header-submenu ul {
+	padding-right: 0;
+	text-align: center;
+}
+
+.basic-image {
+	background: url("../image/basic-image.jpg") no-repeat center;
+	height: 1000px;
+}
+
+.to_top {
+	top: 0;
+	position: fixed;
+	width: 100%;
 }

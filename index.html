@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Ultrex</title>
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 </head>
 <body>
 	<header>
@@ -18,48 +19,46 @@
 				</div>
 			</div>
 		</div>
-		<div class="header-menu clearfix">
-			<div class="menu-line"></div>
+	</header>
+	<div class="header-menu clearfix">
 			<div class="container">
 			<ul>
 				<li><a href="#">HOME</a></li>
-			</ul>
-
-			<ul>
-				<li></li>
-		    </ul>
-
-			<ul>
-				<li>
+				<li><a href="#">ABOUT US</a></li>
+				<li class="header-submenu">
+					<a href="#">PHONE</a>
 					<ul>
-						
+						<li><a href=""#>IPHONE 3GS</a> </li>
+						<li><a href=""#>IPHONE 4S</a> </li>
+						<li><a href=""#>IPHONE 5S</a> </li>
 					</ul>
 				</li>
+				<li><a href="#">SERVICE PROVIDER</a></li>
+				<li><a href="#">ACCESSORIES</a></li>
+				<li><a href="#">DEALERS</a></li>
+				<li><a href="#">COMPARE PHONE</a></li>
+				<li><a href="#">CONTACT US</a></li>
 			</ul>
-
-			<ul>
-				<li></li>
-			</ul>
-
-			<ul>
-				<li></li>
-			</ul>
-			<ul>
-				<li></li>
-			</ul>
-			<ul>
-				<li></li>
-			</ul>
-
-			<ul>
-				<li></li>
-			</ul>
-
 		</div>
-			
 		</div>
 
-	</header>
-	
+		<div class="basic-image">
+			<div class="container">
+				
+			</div>
+		</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+var start_pos=$('.header-menu').offset().top;
+ $(window).scroll(function(){
+  if ($(window).scrollTop()>=start_pos) {
+      if ($('.header-menu').hasClass()==false) $('.header-menu').addClass('to_top');
+  }
+  else $('.header-menu').removeClass('to_top');
+ });
+});
+</script>
+
 </body>
 </html>
