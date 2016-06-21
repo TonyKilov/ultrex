@@ -4,7 +4,13 @@
 	<meta charset="UTF-8">
 	<title>Ultrex</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<link href="lib/jquery.bxslider.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="js/slide-menu.js"></script>
+	<script src="lib/jquery.bxslider.min.js"></script>
+	<script src="js/slider-photos.js"></script>
+	<script src="js/hide-snow.js"></script>
+
 </head>
 <body>
 	<header>
@@ -44,21 +50,96 @@
 
 		<div class="basic-image">
 			<div class="container">
-				
+				<ul class="bxslider">
+					<li>
+						<div class="bxslider-basic-image">
+							<div class="bxslider-content">
+								<div class="bxs-image-right">
+								<img src="image/iphone4S.png" alt="">
+								<img src="image/iphone6.png" alt="">
+								<img src="image/telephones.png" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="bxslider-basic-image">
+							<div class="bxslider-content">
+								<div class="bxs-image-right">
+								<img src="image/iphone4S.png" alt="">
+								<img src="image/iphone6.png" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="bxslider-basic-image">
+							<div class="bxslider-content">
+								<div class="bxs-image-right">
+								<img src="image/iphone4S.png" alt="">
+								<img src="image/iphone6.png" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+				<div class="clearfix"></div>
+
+				<div class="wrap-video">	
+					<iframe width="560" height="315" style="margin:0 auto !important; display: block; border: 2px solid rgba(33,33,33,0.7)" src="https://www.youtube.com/embed/HbnZIhHXs78" frameborder="0" allowfullscreen></iframe>
+				</div>
+
+				<div class="blocks-products">
+					<div class="product-block block-left">
+						<img src="image/iphone6.png" alt="">
+							<div class="product-info">
+								<div class="product-title">Iphone 6S</div>
+								<div class="product-os">iOS 9 Display: Retina</div>
+								<div class="product-hide">
+									<div>CPU: 1.85 GHz dual-core 64-bit ARMv8-A[2][3] "Twister"</div>
+									<div>Battery 6S: 3.82 V 6.55 W·h (1715 mA·h)</div>
+									<div>Front camera:<br> 5 MP, Burst mode, Exposure control, Face detection, Auto-H.</div>
+								</div>
+								<div class="product-price">$195</div>
+								<div class="product-submit"><input class="product-btn" type="submit" value="Details"></div>
+							</div>
+						</div>
+					
+					<div class="product-block block-left">
+						<img src="image/iphone4S.png" alt="">
+							<div class="product-info">
+								<div class="product-title">Iphone 6S</div>
+								<div class="product-os">iOS 9 Display: Retina</div>
+								<div class="product-hide">
+									<div>CPU: 1.85 GHz dual-core 64-bit ARMv8-A[2][3] "Twister"</div>
+									<div>Battery 6S: 3.82 V 6.55 W·h (1715 mA·h)</div>
+									<div>Front camera:<br> 5 MP, Burst mode, Exposure control, Face detection, Auto-H.</div>
+								</div>
+								<div class="product-price">$195</div>
+								<div class="product-submit"><input class="product-btn" type="submit" value="Details"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 
-<script type="text/javascript">
-$(document).ready(function() {
-var start_pos=$('.header-menu').offset().top;
- $(window).scroll(function(){
-  if ($(window).scrollTop()>=start_pos) {
-      if ($('.header-menu').hasClass()==false) $('.header-menu').addClass('to_top');
-  }
-  else $('.header-menu').removeClass('to_top');
- });
-});
-</script>
+		<div class="footer">
+			<div class="container">
+				<div class="footer-menu">
+					<div class="footer-block"><a href="#">Home</a></div>
+					<div class="footer-block"><a href="#">About Us</a></div>
+					<div class="footer-block"><a href="#">Accessories</a></div>
+					<div class="footer-block"><a href="#">Contact Us</a></div>
+				</div>
+			</div>
+		</div>
+		
 
 </body>
 </html>

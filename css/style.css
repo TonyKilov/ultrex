@@ -12,7 +12,7 @@ html,body {
 }
 
 .container {
-	width: 1080px;
+	width: 81%;
 	margin: 0 auto;
 
 }
@@ -27,6 +27,13 @@ html,body {
 	background: -o-linear-gradient(to right, #efefee, #cccac9);
 	background: linear-gradient(to right, #efefee, #cccac9);
 	height: 55px;
+}
+
+.header-shadow{
+	background: url("../image/shadow.png") no-repeat center;
+	height: 1080px;
+	position: absolute;
+	top: 0;
 }
 
 .header-logo {
@@ -133,11 +140,13 @@ html,body {
 .header-menu ul li{
     padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
     float: left;
+    margin: 0 7px;
 }
 
 .header-menu li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
     left:0; /* Приносим его обратно на экран, когда нужно */
     opacity:1; /* Делаем непрозрачным */
+    z-index: 1;
 }
 
 
@@ -192,4 +201,156 @@ html,body {
 	top: 0;
 	position: fixed;
 	width: 100%;
+	z-index: 1;
+}
+
+.bxslider {
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.basic-image {
+	margin: 0 0px;
+	padding-top: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.bxslider-basic-image {
+	background: url("../image/basic-slide.png") no-repeat center;
+	height: 185px;
+    background-size: cover;
+}
+
+.bxs-image-right{
+	margin: 0 auto;
+}
+
+.bxslider-content img{
+	float: left;
+    max-height: 150px;
+    margin: 0px auto;
+    padding: 15px;
+    opacity: 0.8;
+}
+
+.wrap-video{
+	margin: 50px 0;
+}
+
+.blocks-products{
+	width: 100%;
+}
+
+.product-block{
+	margin-right: 1%;
+	margin-left: 1%;
+	width: 47%;
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.product-info{
+	width: 60%;
+	float: left;
+	padding: 15px;
+	font-size: 25px;
+	color: rgba(33,33,33,0.8);
+}
+
+.block-left{ float: left;}
+.product-title{ text-align: left; }
+.product-os {
+	padding: 5px 0;
+    border-bottom: 2px solid gray;
+    text-align: justify;
+}
+.product-price {
+    padding: 5px 0;
+    text-align: right;
+}
+.blocks-products img{
+	max-width: 24%;
+    float: left;
+    max-height: 150px;
+    padding: 15px;
+}
+.product-hide {display: none;}
+.product-hide div{
+	border-bottom: 2px solid gray;
+}
+
+.footer {
+	background: #454f54; /* Old browsers */
+    background: -webkit-linear-gradient(left, #454f54 0%, #4e3b39 48%, #4e3b39 51%, #4b4a3e 100%);
+    background: -o-linear-gradient(left, #454f54 0%, #4e3b39 48%, #4e3b39 51%, #4b4a3e 100%);
+    background: linear-gradient(to right, #454f54 0%, #4e3b39 48%, #4e3b39 51%, #4b4a3e 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#454f54', endColorstr='#4b4a3e',GradientType=1 );
+	-webkit-box-shadow: inset -28px -33px 139px 60px rgba(0,0,0,0.21);
+ 	-moz-box-shadow: inset -28px -33px 139px 60px rgba(0,0,0,0.21);
+	box-shadow: inset -28px -33px 139px 60px rgba(0,0,0,0.21);
+	text-align: center;
+}
+
+.product-btn {
+	-webkit-box-shadow: inset -28px -33px 139px 60px rgba(0,0,0,0.21);
+    -moz-box-shadow: inset -28px -33px 139px 60px rgba(0,0,0,0.21);
+    box-shadow: inset -28px -33px 139px 60px rgba(0,0,0,0.21);
+    background: #19b3d8;
+    border: none;
+    box-shadow: 1px 0px rgba(0,0,0,0.4);
+    height: 35px;
+    width: 120px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.product-btn:hover {
+    border: 1px solid gray;
+    text-decoration: underline;
+}
+.footer-menu{
+	display: inline-block;
+    padding: 20px;
+}
+.product-submit{ text-align: center;}
+
+.footer-block {
+	float: left;
+	padding: 0 15px;
+	border-right: 1px solid white;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.footer-block:first-child {
+	border-left: 1px solid white;
+}
+.footer-block a{
+	font-size: 17px;
+	text-decoration: none;
+	color: white;
+}
+.footer-block a:hover {
+	color: gray;
+	text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1080px){
+	.product-block {
+   		width: 100%;
+    	background: rgba(255,255,255,0.8);
+    	border-radius: 5px;
+    	border: 1px solid gray;
+    	margin: 15px ;
+	}
+	.header-menu ul {
+		margin: 10px 130px;
+	}
+	.header-menu ul li:first-child{
+		margin-left: 40px;
+	}
 }
